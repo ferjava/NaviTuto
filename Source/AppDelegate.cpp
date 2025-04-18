@@ -24,8 +24,8 @@
  ****************************************************************************/
 
 #include "AppDelegate.h"
-#include "MainScene.h"
-
+//#include "MainScene.h"
+#include "LogoScene.h"
 #define USE_AUDIO_ENGINE 1
 
 #if USE_AUDIO_ENGINE
@@ -70,7 +70,7 @@ bool AppDelegate::applicationDidFinishLaunching()
     }
 
     // turn on display FPS
-    director->setStatsDisplay(true);
+   // director->setStatsDisplay(true);
 
     // set FPS. the default value is 1.0/60 if you don't call this
     director->setAnimationInterval(1.0f / 60);
@@ -80,7 +80,7 @@ bool AppDelegate::applicationDidFinishLaunching()
                                     ResolutionPolicy::SHOW_ALL);
 
     // create a scene. it's an autorelease object
-    auto scene = utils::createInstance<MainScene>();
+    auto scene = utils::createInstance<LogoScene>();
 
     // run
     director->runWithScene(scene);
